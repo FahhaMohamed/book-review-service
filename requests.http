@@ -1,6 +1,6 @@
 GET http://localhost:5022
 
-### Get all Book
+### Get all Books
 GET http://localhost:5022/books
 
 ### Get all Reviews

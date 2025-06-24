@@ -10,18 +10,30 @@ public class BookController : ControllerBase
     public BookController(ISeederService seeder)
     {
         _seeder = seeder;
-         _books = _seeder.getBooksSeeder();
     }
 
     [HttpGet]
     public IActionResult GetAllBooks()
     {
-       
-        return Ok(new
+
+        try
         {
-            status = true,
-            message = "Books fetched successfully",
-            books = _books
-        });
+            _books = _seeder.getBooksSeeder();
+            return Ok(new
+            {
+                status = true,
+                message = "Books fetched successfully",
+                books = _books
+            });
+       }
+        catch (Exception ex)
+        {
+
+            return StatusCode(500, new
+            {
+                status = false,
+                message = ex.Message,
+            });
+        }
     }
 }

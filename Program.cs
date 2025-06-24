@@ -2,13 +2,13 @@ using Newtonsoft.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-//******Calling Seeders******
 builder.Services.AddSingleton<ISeederService, SeederService>();
 
 builder.Services.AddControllers();
 
 var app = builder.Build();
+
+app.UseMiddleware<ErrorHandleMiddleware>();
 
 app.MapGet("/", () => "Welcome to Book Review App!!!");
 

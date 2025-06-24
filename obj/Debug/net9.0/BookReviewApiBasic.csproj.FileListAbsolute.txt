@@ -1,6 +1,5 @@
 E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\appsettings.Development.json
 E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\appsettings.json
-E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\data\BookSeeder.json
 E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\BookReviewApiBasic.staticwebassets.endpoints.json
 E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\BookReviewApiBasic.exe
 E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\BookReviewApiBasic.deps.json
@@ -26,3 +25,5 @@ E:\DOTNET\Projects\BookReviewApiBasic\obj\Debug\net9.0\BookReviewApiBasic.pdb
 E:\DOTNET\Projects\BookReviewApiBasic\obj\Debug\net9.0\BookReviewApiBasic.genruntimeconfig.cache
 E:\DOTNET\Projects\BookReviewApiBasic\obj\Debug\net9.0\ref\BookReviewApiBasic.dll
 E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\data\ReviewSeeder.json
+E:\DOTNET\Projects\BookReviewApiBasic\obj\Debug\net9.0\BookReviewApiBasic.sourcelink.json
+E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\data\BookSeeder.json
