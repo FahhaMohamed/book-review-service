@@ -43,6 +43,8 @@ public class BookController : ControllerBase
         try
         {
             var books = _seeder.GetBooksSeeder();
+            var reviews = _seeder.GetReviewSeeder();
+
 
             if (id < 0 || id >= books.Count)
             {
@@ -54,12 +56,19 @@ public class BookController : ControllerBase
             }
 
             var book = books[id];
+            reviews = reviews.Where(review => review.BookId == id).ToList();
+
+            var bookDetail = new BookGetDTO
+            {
+                Book = book,
+                Reviews = reviews
+             };
 
             return Ok(new
             {
                 status = true,
                 message = "Book fetched successfully",
-                book
+                book = bookDetail.GetDetail()
             });
         }
         catch (Exception ex)

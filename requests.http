@@ -4,15 +4,15 @@ GET http://localhost:5022
 GET http://localhost:5022/books
 
 ### Get One Book with ID
-GET http://localhost:5022/books/3
+GET http://localhost:5022/books/4
 
 ### Create New Book
 POST http://localhost:5022/books/store
 Content-Type: application/json
 
 {
-    "title": "The Monke",
-    "author": "Adu",
+    "title": "The title",
+    "author": "author",
     "genre" : "Advanture"
 }
 
@@ -32,7 +32,7 @@ DELETE http://localhost:5022/books/delete
 Content-Type: application/json
 
 {
-    "id": 3
+    "id": 4
 }
 
 ### Get all Reviews
