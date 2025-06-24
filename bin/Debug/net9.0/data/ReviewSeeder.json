@@ -1,0 +1,26 @@
+[
+  {
+    "bookId": 1,
+    "user": "John",
+    "rating": 5,
+    "comment": "An essential guide for developers!"
+  },
+  {
+    "bookId": 2,
+    "user": "Emily",
+    "rating": 4,
+    "comment": "Very inspiring and thought-provoking."
+  },
+  {
+    "bookId": 1,
+    "user": "Sophia",
+    "rating": 4,
+    "comment": "Great, but a bit dense at times."
+  },
+  {
+    "bookId": 3,
+    "user": "David",
+    "rating": 5,
+    "comment": "Helped me focus better at work."
+  }
+]

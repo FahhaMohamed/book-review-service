@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "genre": "Programming"
+  },
+  {
+    "title": "The Alchemist",
+    "author": "Paulo Coelho",
+    "genre": "Fiction"
+  },
+  {
+    "title": "Deep Work",
+    "author": "Cal Newport",
+    "genre": "Self-help"
+  }
+]
