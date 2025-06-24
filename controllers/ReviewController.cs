@@ -42,6 +42,7 @@ public class ReviewController : ControllerBase
         try
         {
             var reviews = _seeder.GetReviewSeeder();
+            var books = _seeder.GetBooksSeeder();
 
             if (id < 0 || id >= reviews.Count)
             {
@@ -51,11 +52,18 @@ public class ReviewController : ControllerBase
                     message = "Invalid Review Id",
                 });
             }
+
+            var review = reviews[id];
+            var newReview = new ReviewGetDTO
+            {
+                review = review,
+                book = books[review.BookId]
+            };
             return Ok(new
             {
                 status = true,
                 message = "Reviews fetched successfully",
-                review = reviews[id],
+                review = newReview.GetDetail(),
             });
         }
         catch (Exception ex)
@@ -81,8 +89,6 @@ public class ReviewController : ControllerBase
             });
         }
 
-
-
         try
         {
             var books = _seeder.GetBooksSeeder();
@@ -103,12 +109,18 @@ public class ReviewController : ControllerBase
 
             review.Id = newId;
 
+            // var r = new ReviewGetDTO
+            // {
+            //     review = review,
+            //     book = books[review.BookId],
+            // };
+
 
             return Created($"http://localhost:5022/reviews/{newId}", new
             {
                 status = true,
                 message = "Review added successfully",
-                review,
+                review = review,
             });
         }
         catch (Exception ex)
@@ -136,6 +148,7 @@ public class ReviewController : ControllerBase
         try
         {
             var reviews = _seeder.GetReviewSeeder();
+            var books = _seeder.GetBooksSeeder();
 
             if (review.Id < 0 || review.Id >= reviews.Count)
             {
@@ -157,13 +170,21 @@ public class ReviewController : ControllerBase
                 });
             }
 
-            reviews[review.Id] = review.GetReview();
+            var updatedReview = review.GetReview();
+
+            reviews[review.Id] = updatedReview;
+
+            var r = new ReviewGetDTO
+            {
+                review = updatedReview,
+                book = books[updatedReview.BookId]
+            };
 
             return Ok(new
             {
                 status = true,
                 message = "Review updated succesfully",
-                review
+                review = r.GetDetail()
             });
 
 

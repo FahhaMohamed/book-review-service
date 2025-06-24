@@ -142,7 +142,7 @@ public class BookController : ControllerBase
         {
             var books = _seeder.GetBooksSeeder();
 
-
+            var reviews = _seeder.GetReviewSeeder();
 
             if (bookDTO.Id < 0 || bookDTO.Id >= books.Count)
             {
@@ -157,13 +157,23 @@ public class BookController : ControllerBase
 
             books[bookDTO.Id] = book;
 
+
+
             _seeder.UpdateBooksSeeder(books);
+
+            reviews = reviews.Where(review => review.BookId == book.Id).ToList();
+
+            var bookDetail = new BookGetDTO
+            {
+                Book = book,
+                Reviews = reviews
+             };
 
             return Ok(new
             {
                 status = true,
                 message = "Book updated successfully",
-                book,
+                book = bookDetail,
             });
         }
         catch (Exception ex)
