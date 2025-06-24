@@ -27,3 +27,13 @@ E:\DOTNET\Projects\BookReviewApiBasic\obj\Debug\net9.0\ref\BookReviewApiBasic.dl
 E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\data\ReviewSeeder.json
 E:\DOTNET\Projects\BookReviewApiBasic\obj\Debug\net9.0\BookReviewApiBasic.sourcelink.json
 E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\data\BookSeeder.json
+E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\Microsoft.Extensions.DependencyModel.dll
+E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\Serilog.dll
+E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\Serilog.AspNetCore.dll
+E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\Serilog.Extensions.Hosting.dll
+E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\Serilog.Extensions.Logging.dll
+E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\Serilog.Formatting.Compact.dll
+E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\Serilog.Settings.Configuration.dll
+E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\Serilog.Sinks.Console.dll
+E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\Serilog.Sinks.Debug.dll
+E:\DOTNET\Projects\BookReviewApiBasic\bin\Debug\net9.0\Serilog.Sinks.File.dll

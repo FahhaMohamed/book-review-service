@@ -1,0 +1,46 @@
+2025-06-25 01:47:53.102 +05:30 [INF] Now listening on: http://localhost:5022
+2025-06-25 01:47:53.125 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-25 01:47:53.125 +05:30 [INF] Hosting environment: Development
+2025-06-25 01:47:53.125 +05:30 [INF] Content root path: E:\DOTNET\Projects\BookReviewApiBasic
+2025-06-25 01:47:53.254 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5022/ - null null
+2025-06-25 01:47:53.274 +05:30 [INF] Executing endpoint 'HTTP: GET /'
+2025-06-25 01:47:53.277 +05:30 [INF] Executed endpoint 'HTTP: GET /'
+2025-06-25 01:47:53.278 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5022/ - 200 null text/plain; charset=utf-8 28.1768ms
+2025-06-25 01:48:21.831 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5022/books - null null
+2025-06-25 01:48:21.857 +05:30 [INF] Executing endpoint 'BookController.GetAllBooks (BookReviewApiBasic)'
+2025-06-25 01:48:21.865 +05:30 [INF] Route matched with {action = "GetAllBooks", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller BookController (BookReviewApiBasic).
+2025-06-25 01:48:21.906 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[Book, BookReviewApiBasic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-25 01:48:21.924 +05:30 [INF] Executed action BookController.GetAllBooks (BookReviewApiBasic) in 55.9378ms
+2025-06-25 01:48:21.924 +05:30 [INF] Executed endpoint 'BookController.GetAllBooks (BookReviewApiBasic)'
+2025-06-25 01:48:21.924 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5022/books - 200 null application/json; charset=utf-8 92.9974ms
+2025-06-25 01:52:33.041 +05:30 [INF] Now listening on: http://localhost:5022
+2025-06-25 01:52:33.064 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2025-06-25 01:52:33.064 +05:30 [INF] Hosting environment: Development
+2025-06-25 01:52:33.064 +05:30 [INF] Content root path: E:\DOTNET\Projects\BookReviewApiBasic
+2025-06-25 01:52:37.652 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5022/books - null null
+2025-06-25 01:52:37.666 +05:30 [INF] [Request] GET: /books
+2025-06-25 01:52:37.666 +05:30 [INF] [Response] GET: Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Http.HttpResponseStream
+2025-06-25 01:52:37.668 +05:30 [INF] Executing endpoint 'BookController.GetAllBooks (BookReviewApiBasic)'
+2025-06-25 01:52:37.674 +05:30 [INF] Route matched with {action = "GetAllBooks", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller BookController (BookReviewApiBasic).
+2025-06-25 01:52:37.713 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[Book, BookReviewApiBasic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-25 01:52:37.732 +05:30 [INF] Executed action BookController.GetAllBooks (BookReviewApiBasic) in 55.6759ms
+2025-06-25 01:52:37.738 +05:30 [INF] Executed endpoint 'BookController.GetAllBooks (BookReviewApiBasic)'
+2025-06-25 01:52:37.739 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5022/books - 200 null application/json; charset=utf-8 87.7483ms
+2025-06-25 01:53:19.623 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5022/books - null null
+2025-06-25 01:53:19.624 +05:30 [INF] [Request] GET: /books
+2025-06-25 01:53:19.625 +05:30 [INF] [Response] GET: 200
+2025-06-25 01:53:19.625 +05:30 [INF] Executing endpoint 'BookController.GetAllBooks (BookReviewApiBasic)'
+2025-06-25 01:53:19.626 +05:30 [INF] Route matched with {action = "GetAllBooks", controller = "Book"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult GetAllBooks() on controller BookController (BookReviewApiBasic).
+2025-06-25 01:53:19.626 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`3[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.Collections.Generic.List`1[[Book, BookReviewApiBasic, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-25 01:53:19.629 +05:30 [INF] Executed action BookController.GetAllBooks (BookReviewApiBasic) in 2.6045ms
+2025-06-25 01:53:19.629 +05:30 [INF] Executed endpoint 'BookController.GetAllBooks (BookReviewApiBasic)'
+2025-06-25 01:53:19.629 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5022/books - 200 null application/json; charset=utf-8 5.7324ms
+2025-06-25 01:54:13.621 +05:30 [INF] Request starting HTTP/1.1 DELETE http://localhost:5022/reviews/delete - application/json 35
+2025-06-25 01:54:13.622 +05:30 [INF] [Request] DELETE: /reviews/delete
+2025-06-25 01:54:13.622 +05:30 [INF] [Response] StatusCode: 200
+2025-06-25 01:54:13.622 +05:30 [INF] Executing endpoint 'ReviewController.DeleteReview (BookReviewApiBasic)'
+2025-06-25 01:54:13.626 +05:30 [INF] Route matched with {action = "DeleteReview", controller = "Review"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult DeleteReview(DeleteReviewDTO) on controller ReviewController (BookReviewApiBasic).
+2025-06-25 01:54:13.639 +05:30 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType1`2[[System.Boolean, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=9.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-06-25 01:54:13.640 +05:30 [INF] Executed action ReviewController.DeleteReview (BookReviewApiBasic) in 13.8811ms
+2025-06-25 01:54:13.640 +05:30 [INF] Executed endpoint 'ReviewController.DeleteReview (BookReviewApiBasic)'
+2025-06-25 01:54:13.640 +05:30 [INF] Request finished HTTP/1.1 DELETE http://localhost:5022/reviews/delete - 200 null application/json; charset=utf-8 19.4302ms
