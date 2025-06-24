@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 public class SeederService : ISeederService
 {
-    public List<Book> getBooksSeeder()
+    public List<Book> GetBooksSeeder()
     {
         try
         {
@@ -23,7 +23,27 @@ public class SeederService : ISeederService
         }
     }
 
-    public List<Review> getReviewSeeder()
+    public void UpdateBooksSeeder(List<Book> books)
+    {
+        var toJson = JsonConvert.SerializeObject(books, Formatting.Indented);
+        try
+        {
+            var filePathBook = Path.Combine(Directory.GetCurrentDirectory(), "data", "BookSeeder.json");
+            if (!File.Exists(filePathBook))
+            {
+                throw new FileNotFoundException("BookSeeder.json Not Found");
+            }
+
+            File.WriteAllText(filePathBook, toJson);
+        }
+        catch (Exception ex)
+        {
+
+            throw new Exception($"Book Error: {ex.Message}");
+        }
+    }
+
+    public List<Review> GetReviewSeeder()
     {
         var filePathReview = Path.Combine(Directory.GetCurrentDirectory(), "data", "ReviewSeeder.json");
         if (!File.Exists(filePathReview))

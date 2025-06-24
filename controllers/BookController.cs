@@ -17,7 +17,7 @@ public class BookController : ControllerBase
 
         try
         {
-            var books = _seeder.getBooksSeeder();
+            var books = _seeder.GetBooksSeeder();
             return Ok(new
             {
                 status = true,
@@ -42,7 +42,7 @@ public class BookController : ControllerBase
 
         try
         {
-            var books = _seeder.getBooksSeeder();
+            var books = _seeder.GetBooksSeeder();
 
             if (id < 0 || id >= books.Count)
             {
@@ -76,13 +76,28 @@ public class BookController : ControllerBase
     [HttpPost("store")]
     public IActionResult StoreBook([FromBody] Book book)
     {
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(new
+            {
+                status = false,
+                message = "All feilds required"
+            });
+        }
+
         try
         {
-            var books = _seeder.getBooksSeeder();
+            var books = _seeder.GetBooksSeeder();
 
+            int newId = books.Count;
 
+            book.Id = newId;
 
-            return Created($"http://localhost:5022/books/{books.Count - 1}", new
+            books.Add(book);
+
+            _seeder.UpdateBooksSeeder(books);
+
+            return Created($"http://localhost:5022/books/{newId}", new
             {
                 status = true,
                 message = "Book created successfully",
@@ -102,10 +117,23 @@ public class BookController : ControllerBase
 
     [HttpPut("update")]
     public IActionResult UpdateBook([FromBody] BookUpdateDTO bookDTO)
+
     {
+
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(new
+            {
+                status = false,
+                message = "All feilds required"
+            });
+        }
+
         try
         {
-            var books = _seeder.getBooksSeeder();
+            var books = _seeder.GetBooksSeeder();
+
+
 
             if (bookDTO.Id < 0 || bookDTO.Id >= books.Count)
             {
@@ -120,6 +148,7 @@ public class BookController : ControllerBase
 
             books[bookDTO.Id] = book;
 
+            _seeder.UpdateBooksSeeder(books);
 
             return Ok(new
             {
@@ -144,7 +173,7 @@ public class BookController : ControllerBase
     {
         try
         {
-            var books = _seeder.getBooksSeeder();
+            var books = _seeder.GetBooksSeeder();
 
             if (bookDeleteDTO.Id < 0 || bookDeleteDTO.Id >= books.Count)
             {
@@ -156,6 +185,8 @@ public class BookController : ControllerBase
             }
 
             books.RemoveAt(bookDeleteDTO.Id);
+
+            _seeder.UpdateBooksSeeder(books);
 
             return Ok(new
             {

@@ -9,6 +9,7 @@ public class BookUpdateDTO
     {
         return new Book
         {
+            Id = this.Id,
             Title = this.Title,
             Author = this.Author,
             Genre = this.Genre
