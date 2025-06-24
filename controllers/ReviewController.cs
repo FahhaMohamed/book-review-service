@@ -109,18 +109,15 @@ public class ReviewController : ControllerBase
 
             review.Id = newId;
 
-            // var r = new ReviewGetDTO
-            // {
-            //     review = review,
-            //     book = books[review.BookId],
-            // };
+            reviews.Add(review);
 
+            _seeder.UpdateReviewsSeeder(reviews);
 
             return Created($"http://localhost:5022/reviews/{newId}", new
             {
                 status = true,
                 message = "Review added successfully",
-                review = review,
+                review,
             });
         }
         catch (Exception ex)
@@ -173,6 +170,8 @@ public class ReviewController : ControllerBase
             var updatedReview = review.GetReview();
 
             reviews[review.Id] = updatedReview;
+
+            _seeder.UpdateReviewsSeeder(reviews);
 
             var r = new ReviewGetDTO
             {
@@ -234,6 +233,8 @@ public class ReviewController : ControllerBase
             }
 
             reviews.RemoveAt(review.Id);
+
+            _seeder.UpdateReviewsSeeder(reviews);
 
             return Ok(new
             {

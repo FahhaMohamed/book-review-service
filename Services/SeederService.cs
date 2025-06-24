@@ -54,4 +54,23 @@ public class SeederService : ISeederService
         var reviews = JsonConvert.DeserializeObject<List<Review>>(jsonReview) ?? new List<Review>();
         return reviews;
     }
+
+    public void UpdateReviewsSeeder(List<Review> reviews)
+    {
+        var toJson = JsonConvert.SerializeObject(reviews, Formatting.Indented);
+        try
+        {
+            var filePathReview = Path.Combine(Directory.GetCurrentDirectory(), "data", "ReviewSeeder.json");
+            if (!File.Exists(filePathReview))
+            {
+                throw new FileNotFoundException("BookSeeder.json Not Found");
+            }
+
+            File.WriteAllText(filePathReview, toJson);
+        }
+        catch (Exception ex)
+        {
+            throw new Exception($"Book Error: {ex.Message}");
+        }
+    }
 }
