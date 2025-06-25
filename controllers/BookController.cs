@@ -12,29 +12,43 @@ public class BookController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult GetAllBooks()
+    public IActionResult GetAllBooks(string? searchByTitle, string? searchByAuthor)
     {
-
         try
         {
             var books = _seeder.GetBooksSeeder();
+
+            var filteredBooks = books.AsQueryable();
+
+            if (!string.IsNullOrWhiteSpace(searchByTitle))
+            {
+                filteredBooks = filteredBooks.Where(book =>
+                    book.Title.Contains(searchByTitle, StringComparison.OrdinalIgnoreCase));
+            }
+
+            if (!string.IsNullOrWhiteSpace(searchByAuthor))
+            {
+                filteredBooks = filteredBooks.Where(book =>
+                    book.Author.Contains(searchByAuthor, StringComparison.OrdinalIgnoreCase));
+            }
+
             return Ok(new
             {
                 status = true,
                 message = "Books fetched successfully",
-                books
+                books = filteredBooks.ToList()
             });
         }
         catch (Exception ex)
         {
-
             return StatusCode(500, new
             {
                 status = false,
-                message = ex.Message,
+                message = ex.Message
             });
         }
     }
+
 
     [HttpGet("{id}")]
     public IActionResult GetOneBook(int id)
@@ -62,7 +76,7 @@ public class BookController : ControllerBase
             {
                 Book = book,
                 Reviews = reviews
-             };
+            };
 
             return Ok(new
             {
@@ -167,7 +181,7 @@ public class BookController : ControllerBase
             {
                 Book = book,
                 Reviews = reviews
-             };
+            };
 
             return Ok(new
             {

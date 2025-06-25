@@ -1,7 +1,7 @@
 GET http://localhost:5022
 
 ### Get all Books
-GET http://localhost:5022/books
+GET http://localhost:5022/books?searchByTitle=code&searchByAuthor=Martin
 
 ### Get One Book with ID
 GET http://localhost:5022/books/3

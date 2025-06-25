@@ -1,30 +1,23 @@
 [
   {
-    "id": 0,
-    "bookId": 1,
-    "user": "John",
-    "rating": 5,
-    "comment": "An essential guide for developers!"
+    "Id": 0,
+    "BookId": 1,
+    "User": "John",
+    "Rating": 5.0,
+    "Comment": "An essential guide for developers!"
   },
   {
-    "id": 1,
-    "bookId": 2,
-    "user": "Emily",
-    "rating": 4,
-    "comment": "Very inspiring and thought-provoking."
+    "Id": 1,
+    "BookId": 2,
+    "User": "Afzan",
+    "Rating": 5.5,
+    "Comment": "Best story"
   },
   {
-    "id": 2,
-    "bookId": 1,
-    "user": "Sophia",
-    "rating": 4,
-    "comment": "Great, but a bit dense at times."
-  },
-  {
-    "id": 3,
-    "bookId": 3,
-    "user": "David",
-    "rating": 5,
-    "comment": "Helped me focus better at work."
+    "Id": 2,
+    "BookId": 1,
+    "User": "Sophia",
+    "Rating": 4.0,
+    "Comment": "Great, but a bit dense at times."
   }
 ]
